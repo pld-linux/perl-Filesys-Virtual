@@ -8,7 +8,7 @@
 Summary:	perl(Filesys::Virtual) − Perl extension to provide a framework for a virtual filesystem
 Name:		perl-Filesys-Virtual
 Version:	0.05
-Release:	0.1
+Release:	0.2
 # note if it is "same as perl"
 License:	same as perl
 Group:		Development/Languages/Perl
@@ -40,6 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+%{__install} -d $RPM_BUILD_ROOT%{perl_vendorlib}/Filesys/Virtual
 
 %clean
 rm -rf $RPM_BUILD_ROOT
