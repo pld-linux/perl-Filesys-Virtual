@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Filesys
 %define		pnam	Virtual
-Summary:	perl(Filesys::Virtual) − Perl extension to provide a framework for a virtual filesystem
+Summary:	perl(Filesys::Virtual) - Perl extension to provide a framework for a virtual filesystem
 Name:		perl-Filesys-Virtual
 Version:	0.05
 Release:	0.2
 # note if it is "same as perl"
-License:	same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT%{perl_vendorlib}/Filesys/Virtual
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Filesys/Virtual
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,9 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 # next one could be moved to perl-modules if more things
-# nod dependin on this module will require that directory
+# not depending on this module will require that directory
 %dir %{perl_vendorlib}/Filesys
-# modules using this one puts them under next dir, 
+# modules using this one puts them under next dir,
 %dir %{perl_vendorlib}/Filesys/Virtual
 %{perl_vendorlib}/Filesys/Virtual.pm
 %{_mandir}/man3/*
