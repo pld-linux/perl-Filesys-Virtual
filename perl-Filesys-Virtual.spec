@@ -50,5 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 # next one could be moved to perl-modules if more things
 # nod dependin on this module will require that directory
 %dir %{perl_vendorlib}/Filesys
+# modules using this one puts them under next dir, 
+%dir %{perl_vendorlib}/Filesys/Virtual
 %{perl_vendorlib}/Filesys/Virtual.pm
 %{_mandir}/man3/*
