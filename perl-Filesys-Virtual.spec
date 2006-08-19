@@ -5,24 +5,27 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Filesys
 %define		pnam	Virtual
-Summary:	perl(Filesys::Virtual) - Perl extension to provide a framework for a virtual filesystem
+Summary:	Filesys::Virtual - Perl extension to provide a framework for a virtual filesystem
+Summary(pl):	Filesys::Virtual - szkielet dla wirtualnych systemów plików
 Name:		perl-Filesys-Virtual
-Version:	0.05
-Release:	0.2
-# note if it is "same as perl"
+Version:	0.06
+Release:	1
+# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	825f02140a699cd11d23ebce178746fb
+URL:		http://search.cpan.org/dist/Filesys-Virtual/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-#BuildRequires:	perl-
-%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module implements a base class for virtual filesystems.
+
+%description -l pl
+Ten modu³ implementuje klasê bazow± dla wirtualnych systemów plików.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -51,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 # next one could be moved to perl-modules if more things
 # not depending on this module will require that directory
 %dir %{perl_vendorlib}/Filesys
-# modules using this one puts them under next dir,
+# modules using this one puts them under next dir
 %dir %{perl_vendorlib}/Filesys/Virtual
 %{perl_vendorlib}/Filesys/Virtual.pm
 %{_mandir}/man3/*
