@@ -6,7 +6,7 @@
 %define		pdir	Filesys
 %define		pnam	Virtual
 Summary:	Filesys::Virtual - Perl extension to provide a framework for a virtual filesystem
-Summary(pl):	Filesys::Virtual - szkielet dla wirtualnych systemów plików
+Summary(pl.UTF-8):   Filesys::Virtual - szkielet dla wirtualnych systemÃ³w plikÃ³w
 Name:		perl-Filesys-Virtual
 Version:	0.06
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module implements a base class for virtual filesystems.
 
-%description -l pl
-Ten modu³ implementuje klasê bazow± dla wirtualnych systemów plików.
+%description -l pl.UTF-8
+Ten moduÅ‚ implementuje klasÄ™ bazowÄ… dla wirtualnych systemÃ³w plikÃ³w.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
