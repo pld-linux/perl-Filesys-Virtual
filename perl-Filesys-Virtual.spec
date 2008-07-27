@@ -9,7 +9,7 @@ Summary:	Filesys::Virtual - Perl extension to provide a framework for a virtual 
 Summary(pl.UTF-8):	Filesys::Virtual - szkielet dla wirtualnych systemów plików
 Name:		perl-Filesys-Virtual
 Version:	0.06
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
