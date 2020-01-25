@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Filesys
 %define		pnam	Virtual
 Summary:	Filesys::Virtual - Perl extension to provide a framework for a virtual filesystem
